@@ -1,4 +1,8 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config({
+  path: "../",
+});
 
 const connectDB = async () => {
   try {
