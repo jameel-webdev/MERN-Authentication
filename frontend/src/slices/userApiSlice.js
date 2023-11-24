@@ -1,6 +1,7 @@
 import { apiSlice } from "./apiSlice";
 
-const USERS_URL = "/api/users";
+const USERS_URL =
+  "https://mern-authentication-backend-50ag.onrender.com/api/users";
 
 export const usersApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
