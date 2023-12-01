@@ -2,6 +2,7 @@ import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
@@ -18,6 +19,7 @@ const app = express();
 app.use(express.json()); // HELPS SEND DATA
 app.use(express.urlencoded({ extended: true })); //HELPS TO SEND FORM DATA AS WELL
 //COOKIE-PARSER-MIDDLEWARE
+app.use(cors());
 app.use(cookieParser());
 //routes
 app.use("/api/users", userRoutes);
